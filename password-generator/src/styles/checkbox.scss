@@ -1,0 +1,59 @@
+@use "./main.scss" as variables;
+input[type=text]{
+    width: 100%;
+    background: transparent;
+    border:none;
+    font-size: 32px;
+        color: variables.$white;
+        @include variables.devices(tablet) {
+            font-size: 32px;
+        }
+        @include variables.devices(mobile) {
+             font-size: 24px;
+            
+              
+         }
+}
+
+input[type="checkbox"]{
+    // -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: transparent;
+    background-image: url("../assets/images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    /* Not removed via appearance */
+    margin: 0;
+    border: 2px solid variables.$white;
+    &:hover{
+        border:2px solid variables.$green;
+    }
+    &:checked{
+        background-color: variables.$green;
+        border:2px solid variables.$green;
+    }
+}
+input[type="range"]{
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    -webkit-appearance: none;
+    // background-color: variables.$grey;
+    
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: variables.$green; /* Green background */
+  border-radius: 50%;
+  cursor: pointer; /* Cursor on hover */
+        &:hover{
+            background-color: variables.$grey;
+            border: 2px solid variables.$green
+        }
+    }
+}
+
+
