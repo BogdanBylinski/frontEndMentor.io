@@ -1,5 +1,4 @@
 import React from "react";
-import Movie from "./Movie";
 import MoviesList from "./MoviesList";
 import Slider from "./Slider";
 import "../styles/_mainContent.scss";
