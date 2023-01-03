@@ -1,0 +1,50 @@
+@use "./var";
+.search_container {
+        width: inherit;
+        height: 47px;
+        display: flex;
+        gap: 24px;
+        flex-direction: row;
+        align-items: flex-start;
+		// .seach_container-icon
+
+		&-icon {
+            // height: 24px;
+            // width: 24px;
+		}
+        & svg{
+            path{
+
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+		// .seach_container-input
+        & label{
+            display: none;
+        }
+		& input[type=text] {
+            background-color: transparent;
+            caret-color: $orange;
+        
+            color: $white;
+            font-weight: 300;
+            font-size: 24px;
+            width: calc(100% - 28px);
+            height: 46px;
+            outline: none;
+            padding-bottom: 14px;
+            letter-spacing: 1.5px;
+            // background-color: transparent;
+            border: none;
+            
+            &:focus{
+                outline: none;
+                border-bottom: 1px solid $light-blue;
+            }
+		}
+        
+        
+}
+

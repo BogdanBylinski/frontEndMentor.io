@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$orange: #fc4747;
+$dark: #10141e;
+$light-blue: #5a698f;
+$dark-blue: #161d2f;
+$white: #ffffff;
+$large: 32px;
+$medium: 24px;
+$small: 18px;
+$body-medium: 15px;
+$body-small: 13px;
+
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-phone: 375px;
+@mixin devices($breakpoint) {
+  //the name of the mixin is devices
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobileS {
+    @media only screen and (max-width: 376px) {
+      @content;
+    }
+  }
+}
+@include devices(tablet) {
+}
+@include devices(mobile) {
+}
+h1 {
+  font-size: 32px;
+  color: $white;
+  font-weight: 300;
+}

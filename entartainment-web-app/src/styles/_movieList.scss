@@ -1,0 +1,38 @@
+@import "./var";
+
+.moviesList_container {
+  width: 100%;
+}
+.header {
+  font-size: 32px;
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    font-size: 20px;
+  }
+}
+.movieList_container {
+  // .movieList_container-movies
+
+  &-movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 32px;
+    gap: 40px;
+    @include devices(tablet) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 24px;
+      gap: 30px;
+    }
+    @include devices(mobile) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 16px;
+      gap: 15px;
+    }
+    @include devices(mobileS) {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+      gap: 15px;
+    }
+  }
+}

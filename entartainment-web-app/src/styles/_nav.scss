@@ -1,0 +1,113 @@
+@import "./var";
+.nav {
+  height: 960px;
+  width: 96px;
+  background-color: $dark-blue;
+  margin: 32px 0 0 32px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-height: 996px) {
+    height: calc(100vh - 64px);
+    //do Smth
+  }
+  @include devices(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+    height: 72px;
+    min-width: calc(100vw - 50px);
+    margin: 23px 25px 10px 25px;
+    border-radius: 10px;
+    padding: 0 16px 0 24px;
+  }
+  @include devices(mobile) {
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    width: 100vw;
+    margin: 0 0;
+    border-radius: 0px;
+    padding: 0 16px;
+  }
+  .nav-logo {
+    margin: 0 auto;
+    margin-top: 35px;
+    @include devices(tablet) {
+      margin: auto 0;
+    }
+    @include devices(mobile) {
+      margin: 0;
+      img {
+        width: 25px;
+        height: 20px;
+      }
+    }
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+    margin-top: 75px;
+    @include devices(tablet) {
+      flex-direction: row;
+      margin: auto 0;
+      gap: $large;
+    }
+    @include devices(mobile) {
+      gap: 24px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &-link:hover {
+      path {
+        fill: $orange;
+      }
+    }
+
+    &-link.active {
+      path {
+        fill: $white;
+      }
+    }
+  }
+  .nav-avatar {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white;
+    border-radius: 50px;
+    margin-top: 552px;
+    @media screen and (max-height: 996px) {
+      margin-top: calc(100vh - 472px);
+    }
+
+    img {
+      width: 38px;
+      height: 38px;
+    }
+    @include devices(tablet) {
+      width: 30px;
+      height: 30px;
+      margin: auto 0;
+      // margin-left: 225px;
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    @include devices(mobile) {
+      height: 24px;
+      width: 24px;
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
