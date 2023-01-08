@@ -1,7 +1,5 @@
 import React from "react";
 import "./_StrategicCard.scss";
-import backgroundURL1 from "../../assets/about/desktop/circles.svg";
-import backgroundURL from "../../assets/about/desktop/circles.svg";
 function StrategicCard({ image, text1, text2, text3, reverse }) {
   return (
     <div
