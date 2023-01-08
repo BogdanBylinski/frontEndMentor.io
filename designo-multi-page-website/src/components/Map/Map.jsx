@@ -8,6 +8,7 @@ export default function Map({ location }) {
     australia: { lat: -30.3293985, lng: 149.7860512 },
     uk: { lat: 51.72840909119928, lng: -3.860572253366434 },
   };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const center = useMemo(() => locations[location], []);
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,

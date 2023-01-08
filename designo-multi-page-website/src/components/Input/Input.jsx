@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import "./_Input.scss";
-import errorLogo from "../../assets/contact/desktop/icon-error.svg";
 import { useEffect } from "react";
 function Input({
   type,
