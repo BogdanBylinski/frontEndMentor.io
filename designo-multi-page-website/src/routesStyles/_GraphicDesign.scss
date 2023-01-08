@@ -1,0 +1,91 @@
+@import "../var";
+
+.graphicDesign {
+  &_designCards {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 120px;
+    flex-direction: row;
+
+    @include devices(tablet) {
+      flex-direction: column;
+      margin-top: 160px;
+    }
+    @include devices(mobile) {
+      margin-top: 120px;
+    }
+
+    &_right {
+      .designCard {
+        width: 50%;
+        @include devices(tablet) {
+          width: 100%;
+        }
+        @include devices(mobile) {
+        }
+      }
+      display: flex;
+      gap: 30px;
+      flex-direction: row;
+      width: 100%;
+      @include devices(tablet) {
+        flex-direction: column;
+      }
+      @include devices(mobile) {
+      }
+    }
+  }
+  &_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 160px;
+  }
+  &_designCards {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 120px;
+    flex-direction: row;
+
+    @include devices(tablet) {
+      flex-direction: column;
+      margin-top: 160px;
+    }
+    @include devices(mobile) {
+      margin-top: 120px;
+    }
+
+    &_right {
+      .designCard {
+        width: 50%;
+        @include devices(tablet) {
+          width: 100%;
+        }
+        @include devices(mobile) {
+        }
+      }
+      display: flex;
+      gap: 30px;
+      flex-direction: row;
+      width: 100%;
+      @include devices(tablet) {
+        flex-direction: column;
+      }
+      @include devices(mobile) {
+      }
+    }
+  }
+  &_designCard {
+    margin-bottom: 480px;
+    @include devices(tablet) {
+    }
+    @include devices(mobile) {
+      margin-bottom: 600px;
+    }
+  }
+}

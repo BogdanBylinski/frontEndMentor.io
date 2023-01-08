@@ -1,0 +1,105 @@
+@import "../../var";
+.locationsCard {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 326px;
+  gap: 30px;
+  margin-bottom: 32px;
+  @include devices(tablet) {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  @include devices(mobile) {
+    width: 100vw;
+    margin-left: -24px;
+    gap: 0;
+  }
+  &:nth-of-type(4) {
+    margin-bottom: 500px;
+    @include devices(tablet) {
+    }
+    @include devices(mobile) {
+      margin-bottom: 600px;
+    }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    @include devices(tablet) {
+      flex-direction: column-reverse;
+    }
+    @include devices(mobile) {
+    }
+  }
+}
+.locationsCard_left {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 88px 95px;
+  align-items: flex-start;
+  gap: 24px;
+  background-color: #fdf3f0;
+  border-radius: 15px;
+  @include devices(tablet) {
+    width: 100%;
+    padding: 88px 74px;
+  }
+  @include devices(mobile) {
+    padding: 80px 24px;
+    border-radius: 0;
+  }
+}
+.locationsCard_left_top {
+  color: $mainColor;
+  font-size: 48px;
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    width: 100%;
+    text-align: center;
+  }
+}
+.locationsCard_left_bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    text-align: center;
+    flex-direction: column;
+  }
+  .bold {
+    font-weight: bold;
+  }
+}
+.locationsCard_left_bottom_left {
+  width: 50%;
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    width: 100%;
+  }
+}
+.locationsCard_left_bottom_right {
+  width: 50%;
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    width: 100%;
+  }
+}
+.locationsCard_right {
+  background-color: #fdf3f0;
+  border-radius: 15px;
+  width: 33%;
+  @include devices(tablet) {
+    width: 100%;
+  }
+  @include devices(mobile) {
+    border-radius: 0px;
+  }
+}

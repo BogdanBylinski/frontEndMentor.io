@@ -1,0 +1,13 @@
+@import "../../var";
+
+.map {
+  height: 326px;
+  width: 100%;
+  background-color: #fdf3f0;
+  border-radius: 15px;
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    border-radius: 0px;
+  }
+}

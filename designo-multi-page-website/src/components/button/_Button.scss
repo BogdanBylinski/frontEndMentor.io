@@ -1,0 +1,30 @@
+@import "../../var";
+
+.button {
+  font-family: "Jost", sans-serif;
+  width: 152px;
+  height: 56px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  &.light {
+    background-color: $whiteColor;
+    color: $blackColor;
+    &:hover {
+      background-color: $mainColorLight;
+      color: $whiteColor;
+    }
+  }
+  &.dark {
+    background-color: $mainColor;
+    color: $whiteColor;
+    &:hover {
+      background-color: $mainColorLight;
+      color: $whiteColor;
+    }
+  }
+}

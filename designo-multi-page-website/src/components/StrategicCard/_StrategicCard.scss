@@ -1,0 +1,144 @@
+@import "../../var";
+.strategicCard {
+  background-color: #fdf3f0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 560px;
+
+  @include devices(tablet) {
+    flex-direction: column-reverse;
+    margin-bottom: 580px;
+  }
+  @include devices(mobile) {
+    width: 100vw;
+    left: -24px;
+    border-radius: 0;
+    margin-bottom: 620px;
+  }
+  &::after {
+    height: 292px;
+    width: 292px;
+    position: absolute;
+    content: "";
+    top: calc(100% - 292px);
+    z-index: 1;
+    left: 0;
+    opacity: 0.2;
+    background-size: 292px 292px;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/about/desktop/circles.svg");
+    @include devices(tablet) {
+      top: 60%;
+      left: 0;
+    }
+    @include devices(mobile) {
+    }
+  }
+  &::before {
+    height: 292;
+    width: 292px;
+    position: absolute;
+    content: "";
+    top: calc(100% - 292px);
+    z-index: 1;
+    left: 292px;
+    opacity: 0.2;
+    background-size: 292px 292px;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/about/desktop/circles.svg");
+    @include devices(tablet) {
+      top: 30%;
+      left: 0;
+    }
+    @include devices(mobile) {
+    }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+    @include devices(tablet) {
+      flex-direction: column-reverse;
+    }
+    @include devices(mobile) {
+    }
+    &::after {
+      left: calc(100% - 292px * 2);
+      @include devices(tablet) {
+        top: 50%;
+        left: 0;
+      }
+      @include devices(mobile) {
+      }
+    }
+    &::before {
+      left: calc(100% - 292px);
+      @include devices(tablet) {
+        top: 50%;
+        left: 0;
+      }
+      @include devices(mobile) {
+      }
+    }
+  }
+}
+.strategicCard_left {
+  width: 66%;
+  padding: 154px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  h1 {
+    color: $mainColor;
+  }
+  @include devices(tablet) {
+    width: 100%;
+    padding: 68px 58px;
+    height: 60%;
+    text-align: center;
+  }
+  @include devices(mobile) {
+  }
+}
+.strategicCard_left_texts {
+  color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  h4 {
+    color: $blackColor;
+  }
+  @include devices(tablet) {
+    text-align: center;
+  }
+  @include devices(mobile) {
+  }
+}
+.strategicCard_right {
+  width: 33%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    @include devices(tablet) {
+      height: 320px;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 15px;
+    }
+    @include devices(mobile) {
+      border-radius: 0;
+    }
+  }
+  @include devices(tablet) {
+    width: 100%;
+  }
+  @include devices(mobile) {
+  }
+}

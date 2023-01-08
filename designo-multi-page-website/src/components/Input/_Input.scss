@@ -1,0 +1,45 @@
+@import "../../var";
+.input {
+  color: $whiteColor;
+  background-color: transparent;
+  outline: none;
+  caret-color: $whiteColor;
+  border: none;
+  border-bottom: 1px solid $whiteColor;
+  height: 38px;
+  padding-left: 16px;
+  resize: none;
+  width: 100%;
+  &.big {
+    height: 100px;
+  }
+  &:focus {
+    border-bottom: 2px solid $whiteColor;
+  }
+  &::placeholder {
+    color: $whiteColor;
+    opacity: 0.5;
+  }
+  &.error {
+    text-align: right;
+    padding-right: 37px;
+  }
+}
+label {
+  position: relative;
+  width: 100%;
+
+  &:has(.error) {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      background-image: url("../../assets/contact/desktop/icon-error.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+}

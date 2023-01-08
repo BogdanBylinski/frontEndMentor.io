@@ -1,0 +1,108 @@
+@import "../../var";
+.headerContainer {
+  position: relative;
+  width: 100%;
+  height: 252px;
+  background-color: $mainColor;
+  border-radius: 15px;
+  margin-bottom: 160px;
+  padding: 64px 190px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  @include devices(tablet) {
+    padding: 64px 0;
+    margin-bottom: 120px;
+  }
+  @include devices(mobile) {
+    width: 100vw;
+    margin-left: -24px;
+    margin-bottom: 96px;
+    border-radius: 0;
+  }
+  h1 {
+    z-index: 1;
+    color: $whiteColor;
+  }
+  h4 {
+    width: 50%;
+    font-weight: 400;
+    text-align: center;
+    color: $whiteColor;
+  }
+  .circle {
+    position: absolute;
+    width: 292px;
+    height: 292px;
+
+    border-radius: 50%;
+    z-index: 0;
+    &:nth-of-type(1) {
+      top: -60%;
+      left: 22%;
+      //   transform: translate(-50%, -50%);
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.31;
+      transform: rotate(-90deg);
+    }
+    &:nth-of-type(2) {
+      top: -60%;
+      left: 48.5%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.31;
+      transform: rotate(-180deg);
+    }
+    &:nth-of-type(3) {
+      top: -60%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.31;
+      transform: rotate(90deg);
+    }
+    &:nth-of-type(4) {
+      top: 56%;
+      left: 48.5%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.31;
+      transform: rotate(-180deg);
+    }
+    &:nth-of-type(5) {
+      top: 55%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0.0001) 0%,
+        rgba(93, 2, 2, 0.497569) 100%
+      );
+      mix-blend-mode: normal;
+      opacity: 0.31;
+      transform: rotate(90deg);
+    }
+  }
+}

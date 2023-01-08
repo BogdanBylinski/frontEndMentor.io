@@ -1,0 +1,11 @@
+@import "../../var";
+
+.greyBubble {
+  width: 1006px;
+  height: 594px;
+  border-radius: 297px 0 297px 297px;
+  background-color: $lightGreyColor;
+  @include devices(laptop) {
+    display: none;
+  }
+}

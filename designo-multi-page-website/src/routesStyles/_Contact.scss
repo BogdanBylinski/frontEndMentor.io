@@ -1,0 +1,17 @@
+@import "../var";
+.contact {
+  .footerContainer {
+    padding-top: 80px;
+  }
+  .aboutCharacteristics_container {
+    // margin-top: 100px;
+    margin-bottom: 320px;
+  }
+  @include devices(tablet) {
+  }
+  @include devices(mobile) {
+    .aboutCharacteristics_container {
+      margin-bottom: 260px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../var";
+
+.cardContainer {
+  text-decoration: none;
+  width: 350px;
+  height: 478px;
+  border-radius: 15px;
+  @include devices(tablet) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 310px;
+  }
+  @include devices(mobile) {
+    width: 350px;
+    height: 478px;
+    flex-direction: column;
+  }
+}
+.cardContainer_top {
+  height: 320px;
+  @include devices(tablet) {
+    height: 100%;
+  }
+  @include devices(mobile) {
+  }
+  img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 100%;
+    @include devices(tablet) {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 15px;
+      border-top-right-radius: 0;
+    }
+    @include devices(mobile) {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 15px;
+    }
+  }
+}
+.cardContainer_bottom {
+  padding: 32px;
+  background-color: #fdf3f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  &:hover {
+    background-color: $mainColor;
+    h3 {
+      color: $whiteColor;
+    }
+    h4 {
+      color: $whiteColor;
+    }
+  }
+  @include devices(tablet) {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+  @include devices(mobile) {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+  }
+  h3 {
+    color: $mainColor;
+  }
+  h4 {
+    text-align: center;
+    color: $blackColor;
+  }
+}
