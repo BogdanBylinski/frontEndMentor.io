@@ -73,7 +73,7 @@ function Footer() {
           </div>
           <div className="letsTalkAboutContainer_right">
             <Button
-              to={"contact"}
+              to={"/contact"}
               text={"Get in touch"}
               color={"light"}
             ></Button>
