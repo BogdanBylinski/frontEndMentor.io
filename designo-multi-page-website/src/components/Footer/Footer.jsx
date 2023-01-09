@@ -20,13 +20,13 @@ function Footer() {
             <img src={logo} alt="logo" />
           </Link>
           <div className="links">
-            <Link to={"about"}>
+            <Link to={"/about"}>
               <h3>our company</h3>
             </Link>
-            <Link to={"locations"}>
+            <Link to={"/locations"}>
               <h3>locations</h3>
             </Link>
-            <Link to={"contact"}>
+            <Link to={"/contact"}>
               <h3>contact</h3>
             </Link>
           </div>
