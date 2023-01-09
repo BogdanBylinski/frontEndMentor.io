@@ -13,7 +13,7 @@ import Button from "../button/Button.jsx";
 function Footer() {
   const { pathname } = useLocation();
   return (
-    <footer className="footerContainer">
+    <footer className="footerContainer" role="contentinfo">
       <div className="footerContainer_main">
         <div className="footerContainer_main_top">
           <Link to={"/"} className="logo">
@@ -43,19 +43,19 @@ function Footer() {
             <p>contact@designo.co</p>
           </div>
           <div className="footerContainer_main_bottom_socials">
-            <a href=".">
+            <a href="." aria-label="social media link - facebook ">
               <Facebook></Facebook>
             </a>
-            <a href=".">
+            <a href="." aria-label="social media link - youtube ">
               <Youtube></Youtube>
             </a>
-            <a href=".">
+            <a href="." aria-label="social media link - twitter ">
               <Twitter></Twitter>
             </a>
-            <a href=".">
+            <a href="." aria-label="social media link - pinterest ">
               <Pinterest></Pinterest>
             </a>
-            <a href=".">
+            <a href="." aria-label="social media link - instagram ">
               <Instagram></Instagram>
             </a>
           </div>

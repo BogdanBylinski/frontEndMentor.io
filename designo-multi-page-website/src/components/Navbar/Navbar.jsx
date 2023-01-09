@@ -12,7 +12,7 @@ function Navbar() {
     active === "closed" ? setActive("opened") : setActive("closed");
   };
   return (
-    <div className="navBar">
+    <div className="navBar" role="navigation">
       <nav>
         <div className="logo">
           <NavLink to={"/"}>
