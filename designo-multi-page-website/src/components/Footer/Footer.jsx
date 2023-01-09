@@ -13,7 +13,7 @@ import Button from "../button/Button.jsx";
 function Footer() {
   const { pathname } = useLocation();
   return (
-    <footer className="footerContainer" role="contentinfo">
+    <footer className="footerContainer">
       <div className="footerContainer_main">
         <div className="footerContainer_main_top">
           <Link to={"/"} className="logo">
